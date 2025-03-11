@@ -16,7 +16,7 @@ The new title font for mod pages (Inter) is way too wide. Many mods have long na
 
 ## Game-specific colors
 
-I don't know why the site switched to an orange color scheme for everything now. They basically just disabled the styles they had already, even though the classese needed to enable those styles are still there. I copied the colors from the old stylesheet. They might at some point remove the classes that make it possible to reactivate these colors, but hopefully a workaround can be found if that happens.
+I don't know why the site switched to an orange color scheme for everything now. They basically just disabled the styles they had already, even though the classes needed to enable those styles are still there. I copied the colors from the old stylesheet. They might at some point remove the classes that make it possible to reactivate these colors, but hopefully a workaround can be found if that happens.
 
 ## Hiding the Share and Report buttons
 
