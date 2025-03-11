@@ -1,0 +1,1 @@
+This userstyle is released into the public domain. Use it however you want. Attribution would be nice.
