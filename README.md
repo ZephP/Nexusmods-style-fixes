@@ -4,6 +4,10 @@ I like some of the things about the new site update that was given a recent beta
 
 During the beta I mainly worked with mod pages and the main mod listing page (for Skyrim Special Edition, not for all games), so changes are biased toward that. I'll update with more changes as I need to make more, and I'm open to suggestions for further improvements.
 
+## Installation
+
+To use these styles, you will need the Stylus extension for Firefox or for Chromium browsers. Create a new style on nexusmods.com, and paste the contents of nexusmods-fixes.css into that.
+
 ## Reclaiming vertical space
 
 The chief problem with the new design is the abuse of vertical space. In the mod listing page, it's now possible to see only about 1.5 rows of results in the grid per scroll. Most of that is due to completely wasted space. Vertical space is also wasted in the headers and just about everywhere else. For anyone with a monitor on 16:9 or wider, which in 2025 is just about everyone, verticality is at a premium. It should be treated as such. With these changes the mod listing page can *nearly* show 2 rows per scroll, and you have more lines of description to read.
