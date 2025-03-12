@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           nexusmods.com
 @namespace      github.com/openstyles/stylus
-@version        1.0.1
+@version        1.0.2
 @description    Fixes bad style choices from the Nexusmods 2025 update
 @author         Lummox JR
 ==/UserStyle== */
@@ -29,9 +29,23 @@
 	 */
 	.pt-4, .pt-6, .py-4, .py-6 {padding-top: 0.5rem;}
 	.pb-4, .pb-6, .py-4, .py-6 {padding-bottom: 0.5rem;}
+	.mt-4, .mt-6, .my-4, .my-6 {margin-top: 0.5rem;}
+	.mb-4, .mb-6, .my-4, .my-6 {margin-bottom: 0.5rem;}
+
+	.pt-8, .py-8 {padding-top: 1rem;}
+	.pb-8, .py-8 {padding-bottom: 1rem;}
+	.pt-10, .py-10 {padding-top: 1.5rem;}
+	.pb-10, .py-10 {padding-bottom: 1.5rem;}
+	.mt-8, .my-8 {margin-top: 1rem;}
+	.mb-8, .my-8 {margin-bottom: 1rem;}
+	.mt-10, .my-10 {margin-top: 1.5rem;}
+	.mb-10, .my-10 {margin-bottom: 1.5rem;}
 
 	/* Get rid of egregious spacers */
 	.space-y-6 > :not([hidden]) ~ :not([hidden]) {margin-top: 0.5rem; margin-bottom: 0.5rem;}
+	.space-y-5 > :not([hidden]) ~ :not([hidden]) {margin-top: 0.5rem; margin-bottom: 0.5rem;}
+
+	.space-y-5 > :last-child, .space-y-6 > :last-child {margin-bottom: 0;}
 
 	/* Mod list has a ton of wasted vertical space */
 	.group\/mod-tile {
@@ -58,12 +72,15 @@
 		.min-h-8 {min-height: 1.5rem;}
 	}
 	
-	.mods-grid {
+	.mods-grid, .profile-mods-grid {
 		row-gap: 1rem;
 	}
 
 	/* Too much space between mods-grid and pagination */
 	.xs\:mb-10 {margin-bottom: 1.5rem;}
+
+	/* Author pages (not new to beta) don't need wide gutters anymore */
+	.next-container {width: auto;}
 	
 	/* Title on mod page */
 	#featured h1 {
@@ -92,7 +109,8 @@
 	#sidebargallery ul.thumbgallery {padding-top: 0.5rem; padding-bottom: 0.5rem;}
 
 	/* File info area has too much vertical padding; SHOULD BE ZERO! */
-	.modpage .info-details #fileinfo {padding-top: 0; padding-bottom: 0;}
+	/* Only do this after thumbnail gallery because this is also used for article info that does need padding */
+	.modpage .info-details .sidebargallery + #fileinfo {padding-top: 0; padding-bottom: 0;}
 
 	/* Antivirus status has bogus inline styles that add vertical size */
 	.modpage #fileinfo .sideitem:last-child > div {height: auto !important; top: unset !important;}
@@ -119,13 +137,22 @@
 	/* Too big a margin below comment page nav */
 	.comments .comment-nav {margin-bottom: 0.5rem;}
 
-    /* Give back the nice background image */
-    body::before {
-        background-image: url('/assets/images/default/bg_game_index.jpg');
-        height: 100%;
-        filter: none;
-    }
-    
+	/* Article page title area has too much bottom padding, inconsistent with mod page */
+	#featured #feature.blank #pagetitle {padding-bottom: 0.5rem;}
+
+	/* Article page background is weirdly bright compared to description */
+	.articlepage article {background-color: var(--surface-mid);}
+
+	/* Comments below article have extra space they don't need */
+	.container ~ #comment-container {padding-top: 0;}
+
+	/* Give back the nice background image */
+	body::before {
+		background-image: url('/assets/images/default/bg_game_index.jpg');
+		height: 100%;
+		filter: none;
+	}
+	
 	/* Theme colors Nexus wanted to remove for some reason */
 	body.scheme-theme-ReskinBlue {
 		--theme-primary: #57a5cc !important;
