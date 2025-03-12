@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           nexusmods.com
 @namespace      github.com/openstyles/stylus
-@version        1.0.0
+@version        1.0.1
 @description    Fixes bad style choices from the Nexusmods 2025 update
 @author         Lummox JR
 ==/UserStyle== */
@@ -118,7 +118,14 @@
 	#comment-count {padding-top: 0;}
 	/* Too big a margin below comment page nav */
 	.comments .comment-nav {margin-bottom: 0.5rem;}
-	
+
+    /* Give back the nice background image */
+    body::before {
+        background-image: url('/assets/images/default/bg_game_index.jpg');
+        height: 100%;
+        filter: none;
+    }
+    
 	/* Theme colors Nexus wanted to remove for some reason */
 	body.scheme-theme-ReskinBlue {
 		--theme-primary: #57a5cc !important;
