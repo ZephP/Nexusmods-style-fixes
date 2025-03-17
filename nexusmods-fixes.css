@@ -1,9 +1,10 @@
 /* ==UserStyle==
 @name           nexusmods.com
 @namespace      github.com/openstyles/stylus
-@version        1.0.2
+@version        1.0.3
 @description    Fixes bad style choices from the Nexusmods 2025 update
 @author         Lummox JR
+@updateURL      https://raw.githubusercontent.com/LummoxJR/Nexusmods-style-fixes/refs/heads/main/nexusmods-fixes.css
 ==/UserStyle== */
 
 @-moz-document domain("next.nexusmods.com"), domain("www.nexusmods.com") {
@@ -142,6 +143,9 @@
 
 	/* Article page background is weirdly bright compared to description */
 	.articlepage article {background-color: var(--surface-mid);}
+
+	/* Make numerical lists more like bullet lists so they indent properly */
+	ul.content_list_ordered > li {margin-left: 20px;}
 
 	/* Comments below article have extra space they don't need */
 	.container ~ #comment-container {padding-top: 0;}
