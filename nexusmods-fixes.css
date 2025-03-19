@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           nexusmods.com
 @namespace      github.com/openstyles/stylus
-@version        1.0.3
+@version        1.0.4
 @description    Fixes bad style choices from the Nexusmods 2025 update
 @author         Lummox JR
 @updateURL      https://raw.githubusercontent.com/LummoxJR/Nexusmods-style-fixes/refs/heads/main/nexusmods-fixes.css
@@ -42,6 +42,10 @@
 	.mt-10, .my-10 {margin-top: 1.5rem;}
 	.mb-10, .my-10 {margin-bottom: 1.5rem;}
 
+	/* Holy frell, dudes, WHY? */
+	.pt-20, .py-20 {padding-top: 1.5rem;}
+	.pb-20, .pb-20 {padding-bottom: 1.5rem;}
+
 	/* Get rid of egregious spacers */
 	.space-y-6 > :not([hidden]) ~ :not([hidden]) {margin-top: 0.5rem; margin-bottom: 0.5rem;}
 	.space-y-5 > :not([hidden]) ~ :not([hidden]) {margin-top: 0.5rem; margin-bottom: 0.5rem;}
@@ -80,13 +84,13 @@
 	/* Too much space between mods-grid and pagination */
 	.xs\:mb-10 {margin-bottom: 1.5rem;}
 
-	/* Author pages (not new to beta) don't need wide gutters anymore */
-	.next-container {width: auto;}
+	/* Remove wide gutters, but make allowances for very wide screens */
+	.next-container {width: min(max(90%, 2000px), 100%);}
 	
 	/* Title on mod page */
 	#featured h1 {
 		/* Use a nice condensed font */
-		font-family: 'Cabin Condensed','Saira Condensed',sans-serif;
+		font-family: 'Saira Condensed','Cabin Condensed',sans-serif;
 		margin-bottom: 0.5rem;
 	}
 	
@@ -156,6 +160,47 @@
 		height: 100%;
 		filter: none;
 	}
+
+	/* Game overview page */
+
+	/* Trending Mods section is huge and needs tweaking */
+	section[aria-labelledby="trending-mods-header"] {
+		/* 2nd div has the content; 1st has the header */
+		& > div:nth-of-type(2) {
+			display: grid;
+			grid-template-columns: auto 30%;
+			grid-column-gap: 1.5rem;
+			/* Divider we don't need or want */
+			hr {display: none;}
+			/* Smaller section below the two big tiles */
+			& > div:nth-of-type(2) {
+				margin: 0;
+				grid-template-columns: repeat(2, minmax(0,1fr));
+				grid-auto-rows: minmax(min-content, 1fr);
+				grid-column-gap: 1.5rem;
+				grid-row-gap: 1rem;
+			}
+		}
+	}
+
+	/* LOL bye */
+	section[aria-labelledby="popular-collections-header"] {
+		display: none;
+	}
+
+	section[aria-labelledby="more-mods-header"] {
+		/* Move the time button in More Mods next to the other buttons */
+		div.flex.sm\:flex-row {
+			div:first-child {width: auto;}
+			button:nth-child(2) {margin-left: unset;}
+		}
+	}
+
+	.news-grid {
+		/* What's up with those huge titles? */
+		.typography-heading-sm {font-size: 1.2rem;}
+	}
+	
 	
 	/* Theme colors Nexus wanted to remove for some reason */
 	body.scheme-theme-ReskinBlue {
