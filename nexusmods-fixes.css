@@ -12,6 +12,51 @@
 	@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+	/*Mod Images Background Transparency*/
+	div.clearfix.modimages {
+	  background-color: transparent;
+	}
+
+	/*Tabs Transparency*/
+	#mod-page-tab-description, #mod-page-tab-files, #mod-page-tab-images, #mod-page-tab-videos, #mod-page-tab-posts, #mod-page-tab-bugs, #mod-page-tab-actions, #mod-page-tab-stats, #mod-page-tab-articles, .selected {
+	  background-color: transparent;
+	  background: none
+	}
+
+	/*Premium Banner Transparency*/
+	div.new-premium-banner {
+	  background: transparent;
+	}
+	
+	/*Premium Banner fix*/
+	p.typography-body-md {
+	  color: white;
+	}
+	
+	/*Quote Transparency*/
+	
+	figure.quote.col-3-3 {
+	  background-color: transparent;
+	}
+	
+	/*Page Indicator Transparency*/
+	a.page-selected.mfp-prevent-close {
+	  background-color: transparent;
+	}
+	
+	/*Mod Tile Transparency*/
+	.bg-surface-low {
+	  background-color: transparent;
+	}
+
+	/*Header Padding*/
+	div.border-stroke-weak.w-full.space-y-6.border-b.pb-6.pt-4 {
+	  border-top-width: 0px;
+	  border-bottom-width: 0px;
+	  padding-bottom: 0px;
+	  padding-top: 0px;
+	}
+	
 	/* Awful big game-name header below breadcrumbs */
 	#mainContent nav:first-child + div {
 		display: none;
