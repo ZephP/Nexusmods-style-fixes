@@ -20,7 +20,6 @@
 	/*Tabs Transparency*/
 	#mod-page-tab-description, #mod-page-tab-files, #mod-page-tab-images, #mod-page-tab-videos, #mod-page-tab-posts, #mod-page-tab-bugs, #mod-page-tab-actions, #mod-page-tab-stats, #mod-page-tab-articles, .selected {
 	  background-color: transparent;
-	  background: none
 	}
 
 	/*Premium Banner Transparency*/
@@ -45,10 +44,11 @@
 	}
 	
 	/*Mod Tile Transparency*/
-	.bg-surface-low {
-	  background-color: transparent;
+	.bg-surface-low,  div.relative {
+      background: none !important;
 	}
-
+    
+    
 	/*Header Padding*/
 	div.border-stroke-weak.w-full.space-y-6.border-b.pb-6.pt-4 {
 	  border-top-width: 0px;
